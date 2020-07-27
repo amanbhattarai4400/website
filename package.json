@@ -12,10 +12,15 @@
     "preview": "gatsby build && gatsby serve"
   },
   "dependencies": {
-    "@reflexjs/gatsby-plugin-metatags": "^0.1.5",
-    "@reflexjs/gatsby-theme-base": "^0.2.3",
-    "@reflexjs/gatsby-theme-post": "^0.3.3",
-    "gatsby": "^2.22.11",
+    "@reflexjs/components": "^0.1.8",
+    "@reflexjs/gatsby-plugin-metatags": "^0.1.6",
+    "@reflexjs/gatsby-theme-base": "^0.2.8",
+    "@reflexjs/gatsby-theme-post": "^0.3.4",
+    "gatsby": "^2.24.10",
+    "gatsby-plugin-manifest": "^2.4.20",
+    "gatsby-plugin-netlify": "^2.3.11",
+    "gatsby-redirect-from": "^0.2.4",
+    "gatsby-transformer-remark": "^2.8.27",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   }

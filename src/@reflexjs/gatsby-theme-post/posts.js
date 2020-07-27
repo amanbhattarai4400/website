@@ -1,5 +1,3 @@
-
-
 import * as React from "react"
 import { Article, H2, P, Div, Grid } from "@reflexjs/components"
 import { Link } from "@reflexjs/gatsby-theme-core"

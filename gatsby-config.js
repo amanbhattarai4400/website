@@ -10,6 +10,18 @@ module.exports = {
     "@reflexjs/gatsby-theme-base",
     "@reflexjs/gatsby-theme-post",
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `TwistBlogg`,
+        short_name: `TwistBlogg`,
+        start_url: `/`,
+        background_color: `#191924`,
+        theme_color: `#0066FF`,
+        display: `standalone`,
+        icon: `content/images/favicon1.png`,
+      },
+    },
+    {
       resolve: "@reflexjs/gatsby-plugin-metatags",
       options: {
         debug: true,
@@ -37,6 +49,8 @@ module.exports = {
           },
         ],
       }
-    }
+    },
+   //"gatsby-redirect-from",
+   "gatsby-plugin-netlify"
   ],
 }
