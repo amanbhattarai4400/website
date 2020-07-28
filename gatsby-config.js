@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     title: "TwistBlogg",
     description: "TwistBlogg is an information resource site for Bloggers and Geeks.Here we focus on SEO, Blogging, Blogging Widgets, Tips and Tricks related to Social Media and Web Apps.",
-    siteUrl: process.env.SITE_URL || "http://localhost:8000",
+    siteUrl: process.env.SITE_URL || "https://mytwistblogg.netlify.app",
   },
   plugins: [
     "@reflexjs/gatsby-theme-base",
@@ -28,14 +28,6 @@ module.exports = {
         theme_color: `#0066FF`,
         display: `standalone`,
         icon: `content/images/favicon.png`,
-        icons: [
-          {
-            src: `maskable_icon.webp`,
-            sizes: `196x196`,
-            type: `image/webp`,
-            purpose: `maskable`,
-          },
-        ],
       },
     },
     {

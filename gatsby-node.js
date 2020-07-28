@@ -36,6 +36,16 @@ exports.createPages = async ({ actions, graphql}) => {
   toPath: '/blog/premium-contact-page-blogger',
   isPermanent: true
 },
+{
+  fromPath: '/2019/10/simple-email-subscription-box-for-blogger.html',
+  toPath: '/blog/elegant-email-subscription-box-blogger',
+  isPermanent: true
+},
+{
+  fromPath: '/2020/07/how-to-create-beautiful-animated-hero.html',
+  toPath: '/blog/blogger-footer-animation',
+  isPermanent: true
+},
 ];
 
 redirects.forEach(redirect => createRedirect(redirect));
