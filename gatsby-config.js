@@ -28,6 +28,9 @@ module.exports = {
         theme_color: `#0066FF`,
         display: `standalone`,
         icon: `content/images/favicon.png`,
+        icon_options: {
+          purpose: `maskable`,
+        },
       },
     },
     {
