@@ -27,7 +27,7 @@ module.exports = {
         background_color: `#191924`,
         theme_color: `#0066FF`,
         display: `standalone`,
-        icon: `content/images/favicon.webp`,
+        icon: `content/images/favicon.png`,
         icons: [
           {
             src: `maskable_icon.webp`,
