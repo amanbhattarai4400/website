@@ -40,6 +40,7 @@ export const HeaderBlock = ({ ...props }) => {
             onClick={() => setShowMenu(true)}
           >
             <Icon name="menu" size="7" />
+            <VisuallyHidden>Show Menu</VisuallyHidden>
           </Button>
         </Flexbox>
         <Div
@@ -66,6 +67,7 @@ export const HeaderBlock = ({ ...props }) => {
             <Branding />
             <Button variant="link" onClick={() => setShowMenu(false)} mr={-3}>
               <Icon name="x" size="6" />
+              <VisuallyHidden>Hide Menu</VisuallyHidden>
             </Button>
           </Flexbox>
           <NavMenu name={navName} gap={[0, 8]} borderTopWidth="1px" />

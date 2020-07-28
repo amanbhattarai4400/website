@@ -3,10 +3,13 @@ import base from "@reflexjs/preset-base"
 export default {
   preset: base,
   colors: {
-    postblock: "#EBECED",
+    background: "#F5F5FA",
+    muted: "#FFFFFF",
+    border: "#DADADA",
+    postblock: "#EAEAEF",
     modes: {
       dark: {
-        postblock: "#1B1123",
+        postblock: "#2A2A3C",
       },
     },
   },
@@ -17,7 +20,7 @@ export default {
     inlineCode: {
       fontFamily: "monospace",
       color: "primary",
-      bg: "muted",
+      bg: "postblock",
       p: "1",
       fontSize: ["md","lg"],
     },

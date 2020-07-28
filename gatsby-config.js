@@ -8,7 +8,16 @@ module.exports = {
   },
   plugins: [
     "@reflexjs/gatsby-theme-base",
-    "@reflexjs/gatsby-theme-post",
+    {
+      resolve: `@reflexjs/gatsby-theme-post`,
+      options: {
+        contentPath: "content/posts",
+        basePath: "/blog",
+        postsPerPage: 6,
+        pageQuery: null,
+        slugResolver: null,
+      }
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -18,7 +27,15 @@ module.exports = {
         background_color: `#191924`,
         theme_color: `#0066FF`,
         display: `standalone`,
-        icon: `content/images/favicon1.png`,
+        icon: `content/images/favicon.webp`,
+        icons: [
+          {
+            src: `maskable_icon.webp`,
+            sizes: `196x196`,
+            type: `image/webp`,
+            purpose: `maskable`,
+          },
+        ],
       },
     },
     {
@@ -28,7 +45,7 @@ module.exports = {
         global: {
           title: "TwistBlogg - Get Premium Blogger Tutorials",
           description: "TwistBlogg is an information resource site for Bloggers and Geeks.Here we focus on SEO, Blogging, Blogging Widgets, Tips and Tricks related to Social Media and Web Apps.",
-          image: "how to use font awesome in blogger.png",
+          image: "social media.webp",
         },
         types: [
           `Page`,
@@ -50,7 +67,12 @@ module.exports = {
         ],
       }
     },
-   //"gatsby-redirect-from",
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/`, `/blog`],
+      },
+    },
    "gatsby-plugin-netlify"
   ],
 }

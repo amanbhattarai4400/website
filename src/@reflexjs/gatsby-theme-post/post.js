@@ -3,12 +3,10 @@ import { MDXRenderer, Link } from "@reflexjs/gatsby-theme-core"
 import { Article, Container, H1, H4, Div, P, Flexbox, Span, A, VisuallyHidden } from "@reflexjs/components"
 import { Image } from "@reflexjs/gatsby-plugin-image"
 import { PostMeta } from "@reflexjs/gatsby-theme-post"
-//import { useProfile } from "@reflexjs/gatsby-theme-profile"
+import { useProfile } from "@reflexjs/gatsby-theme-profile"
 import { Icon } from "@reflexjs/gatsby-theme-core"
 
-const baseURL = `https://www.twistblogg.com/`
-
-//const [authorProfile] = useProfile(amanbhattarai)
+const baseURL = `https://www.twistblogg.com`
 
 export const Post = ({
   title,
@@ -22,7 +20,9 @@ export const Post = ({
   author,
   timeToRead,
   tags,
-}) => (
+}) => {
+  const [authorProfile] = useProfile(author) 
+  return (
   <Article py="8|12|14">
     <Container maxW="null|null|null|900px">
       <Div textAlign="center">
@@ -130,7 +130,7 @@ export const Post = ({
          </A>
         </Span>
         <Span pl="4">
-        <A href={'https://www.linkedin.com/sharing/share-offsite/?url' + baseURL + slug +
+        <A href={'https://www.linkedin.com/sharing/share-offsite/?url=' + baseURL + slug +
         '&title=' + title }
            target="_blank" 
            rel="nofollow noreferrer noopener external">
@@ -148,7 +148,7 @@ export const Post = ({
       mb="8"
     >
       <Image
-        src="placeholder.jpg"
+        src={authorProfile.picture}
         w="80px"
         aspectRatio={1 / 1}
         rounded="full"
@@ -165,10 +165,10 @@ export const Post = ({
           Written By
         </Span>
         <H4 my="0" fontSize="md">
-          Aman Bhattarai
+          {authorProfile.name}
         </H4>
         <P mt="2" pr="5" fontSize="xs" color="#757575">
-        Content Creator, Blogger, Programmer, Computer Engineer 
+        {authorProfile.excerpt} 
          </P>
       </Div>
       <Span pt="5" fontWeight="light" fontSize="xs">
@@ -177,4 +177,5 @@ export const Post = ({
     </Flexbox>
     </Container>
   </Article>
-)
+ )
+}
