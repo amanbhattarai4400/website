@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     title: "TwistBlogg",
     description: "TwistBlogg is an information resource site for Bloggers and Geeks.Here we focus on SEO, Blogging, Blogging Widgets, Tips and Tricks related to Social Media and Web Apps.",
-    siteUrl: process.env.SITE_URL || "https://mytwistblogg.netlify.app/",
+    siteUrl: process.env.SITE_URL || "http://localhost:8000",
   },
   plugins: [
     "@reflexjs/gatsby-theme-base",
